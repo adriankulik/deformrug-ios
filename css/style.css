@@ -1,0 +1,200 @@
+@font-face {
+  font-family: "Poppins-Black";
+  src: url("../build/Poppins/Poppins-Black.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url("../build/Poppins/Poppins-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Poppins-ExtraLight";
+  src: url("../build/Poppins/Poppins-ExtraLight.ttf") format("truetype");
+}
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.modelView {
+  z-index: 0;
+  position: absolute;
+  display: block;
+  background-color: #000;
+  height: 100%;
+  width: 100%;
+}
+.modelView__canvas {
+  height: 100%;
+  width: 100%;
+}
+
+.content__load {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #808080;
+  z-index: 999;
+  transition: all 1s ease;
+}
+.content__load__text {
+  padding: 2vh;
+  font-family: "Poppins-Medium", sans-serif;
+  font-size: calc(1.5vh + 1.5vw);
+  color: rgb(0, 0, 0);
+}
+.content__load__indicator {
+  width: calc(5vw + 5vh);
+  height: calc(5vw + 5vh);
+  background-color: #000000;
+  -webkit-animation: loading 1s infinite;
+          animation: loading 1s infinite;
+}
+.content__load__finished {
+  opacity: 0%;
+  position: absolute;
+  display: flex;
+  background-color: #000000;
+  z-index: 0;
+}
+
+.button {
+  padding: 2vh;
+  z-index: 997;
+  position: relative;
+  float: right;
+  align-items: center;
+  justify-content: center;
+}
+.button__container {
+  width: calc(6vh + 6vw);
+  height: calc(6vh + 6vw);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button__container__xr {
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  color: #000000;
+  margin: 0px;
+  font-family: "Poppins-Black", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.137254902);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.button__container__xr > img {
+  padding: calc(1vh + 2vw);
+}
+
+.info {
+  z-index: 997;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.info__centeredButton {
+  width: 80%;
+  background-color: #fff;
+  color: #fff;
+  border: 0px solid green;
+  box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.2);
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.info__container {
+  border: none;
+  width: calc(6vh + 6vw);
+  height: calc(6vh + 6vw);
+  background-color: rgba(255, 255, 255, 0.137254902);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.1s;
+}
+.info__container--active {
+  width: calc(100vw - 4vh);
+  transition: width 0.1s;
+}
+.info__container__image {
+  display: block;
+  border: none;
+  color: #000000;
+  margin: 0px;
+  font-family: "Poppins-Black", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(1vh + 2vw);
+}
+.info__container__image--active {
+  display: none;
+}
+.info__container__text {
+  text-align: left;
+  padding: calc(0.3vh + 0.3vw);
+  font-size: calc(0.6vh + 0.6vw);
+  font-family: "Poppins-Medium", sans-serif;
+  color: #000000;
+  display: none;
+}
+.info__container__text--active {
+  display: block;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    transform: rotate3d(1, 0, 0, 0deg);
+  }
+  5% {
+    transform: rotate3d(1, 0, 0, 0deg);
+  }
+  50% {
+    transform: rotate3d(1, 0, 0, 180deg);
+  }
+  55% {
+    transform: rotate3d(1, 0, 0, 180deg);
+  }
+  100% {
+    transform: rotate3d(1, 1, 0, 180deg);
+  }
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate3d(1, 0, 0, 0deg);
+  }
+  5% {
+    transform: rotate3d(1, 0, 0, 0deg);
+  }
+  50% {
+    transform: rotate3d(1, 0, 0, 180deg);
+  }
+  55% {
+    transform: rotate3d(1, 0, 0, 180deg);
+  }
+  100% {
+    transform: rotate3d(1, 1, 0, 180deg);
+  }
+}/*# sourceMappingURL=style.css.map */
